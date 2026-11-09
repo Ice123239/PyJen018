@@ -3,17 +3,17 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'python -m py_compile main.py test_main.py'
+                bat '"C:/Users/ADMIN/AppData/Local/Python/bin/python.exe" -m py_compile main.py test_main.py'
             }
         }
         stage('Test') {
             steps {
-                bat 'python -m unittest test_main.py'
+                bat '"C:/Users/ADMIN/AppData/Local/Python/bin/python.exe" -m unittest test_main.py'
             }
         }
         stage('Deploy') {
             steps {
-                bat 'python main.py'
+                bat '"C:/Users/ADMIN/AppData/Local/Python/bin/python.exe" main.py'
             }
         }
     }
